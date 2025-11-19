@@ -1,5 +1,7 @@
 \documentclass{article}
-\usepackage{amsmath}
+\usepackage{unicode-math}
+\pagestyle{plain}
+\setmathfont{XITSMath-Regular}
 \usepackage[UTF8]{ctex}
 \usepackage{graphicx}
 \usepackage{fontspec}
@@ -37,13 +39,16 @@
 
 \begin{document}
 % 封面页信息
+\thispagestyle{empty}
+\vspace*{8em}
 {\centering\zihao{2}
     \textbf{概率论与数理统计课程小论文} \\
     \vspace*{1em}
-    {\heiti 这是题目} \\
+    {\heiti 题目：}{\heiti 这是题目} \\
 }
 \vspace*{8em}
 \begin{center}
+    \renewcommand{\arraystretch}{1.5}
     {\bfseries\zihao{-2}
         \begin{tabular}{|>{\centering\arraybackslash}m{3cm}|c|}
             \hline
@@ -62,29 +67,23 @@
 \end{center}
 \newpage
 % 摘要及关键词
-{\centering
-    \bfseries\zihao{-2}\heiti 摘\quad 要\par
-    % 神秘，不加 \par 无法居中
-}
+\begin{center}
+    \bfseries\zihao{-2}\heiti 摘\quad 要
+\end{center}
 
-摘要是论文内容的高度概括，应具有独立性和自含性，即不阅读论文的全文，就能获得必要的信息。摘要应包括本论文的目的、主要研究内容、研究方法、创造性成果及其理论与实际意义。摘要中不宜使用公式、化学结构式、图表和非公知公用的符号与术语，不标注引用文献编号，同时避免将摘要写成目录式的内容介绍。\\ 
+摘要是论文内容的高度概括，应具有独立性和自含性，即不阅读论文的全文，就能获得必要的信息。摘要应包括本论文的目的、主要研究内容、研究方法、创造性成果及其理论与实际意义。摘要中不宜使用公式、化学结构式、图表和非公知公用的符号与术语，不标注引用文献编号，同时避免将摘要写成目录式的内容介绍。
 
-关键词：关键词1；关键词2；…… \\
+关键词：关键词1；关键词2；…… 
 
-% 标题
-{
-\zihao{3}\noindent\textbf{课题背景及研究的目的和意义} \\
-}
+\section*{课题背景及研究的目的与意义}
 
 1828年，R.R.Willis发表了一篇关于小孔节流平板中压力分布的文章，这是有记载的研究气体润滑的最早文献。
 
 这是参考文献写法\cite{fenbuhanshu}
 
+公式示例：$f(x|y) = \frac{f(x,y)}{f(y)}$
+
 \newpage
 \printbibliography
 \vfill
-\begin{center}
-    \zihao{5}
-    本文使用\LaTeX 进行写作
-\end{center}
 \end{document}
